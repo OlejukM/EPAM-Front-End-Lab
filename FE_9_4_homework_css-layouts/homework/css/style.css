@@ -343,8 +343,12 @@ footer li {
 #information ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
+}
+
+#hidden{
+    display: none;
 }
 
 #information button:hover {
