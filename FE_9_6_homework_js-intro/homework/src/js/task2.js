@@ -1,6 +1,6 @@
-const a = +prompt('Enter length of 1st side');
-const b = +prompt('Enter length of 2nd side');
-const angle = +prompt('Enter angle between sides');
+const a = +prompt('Enter length of 1st side', '0');
+const b = +prompt('Enter length of 2nd side', '0');
+const angle = +prompt('Enter angle between sides', '0');
 const ang = 180;
 const c = Math.sqrt(a * a + b * b - 2 * a * b * Math.cos(Math.PI / ang * angle));
 const perimeter = a + b + c;
