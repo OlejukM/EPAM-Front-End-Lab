@@ -13,9 +13,9 @@ let query = confirm('Do you want to play a game ?');
 if (query === true) {
   let random = Math.floor(Math.random() * numSix);
   let attempts = 3;
-  game();
+  fn1();
 
-  function game() {
+  let fn1 = function game() {
     for (let i = 0; i < 3; i++) {
       let userAnswer = +prompt(
         'Enter number from 0 to 5\n' +
@@ -46,7 +46,7 @@ if (query === true) {
               ' Do you want to continue?'
           );
           if (mazltoff === true) {
-            game2();
+            fn();
           }
           break;
         } else if (attempts === 2) {
@@ -57,7 +57,7 @@ if (query === true) {
               ' Do you want to continue?'
           );
           if (mazltoff === true) {
-            game2();
+            fn();
           }
           break;
         } else if (attempts === numOne) {
@@ -68,7 +68,7 @@ if (query === true) {
               ' Do you want to continue?'
           );
           if (mazltoff === true) {
-            game2();
+            fn();
           }
 
           break;
@@ -83,7 +83,7 @@ if (query === true) {
     }
   }
 
-  function game2() {
+  let fn = function game2() {
     attempts = 3;
     random = Math.floor(Math.random() * numEleven);
     possiblePrize = numThirty;
@@ -135,7 +135,7 @@ if (query === true) {
     attempts = 3;
     prize = 0;
     possiblePrize = numTen;
-    game();
+    fn1();
   } else {
     let totalPrize = prize + prize2;
     alert('Thank you for a game. Your prize is: ' + totalPrize);
