@@ -1,42 +1,72 @@
 let prize = 0;
 let possiblePrize = 10;
 let prize2 = 0;
+const numSix = 6;
+const numOne = 1;
+const numTen = 10;
+const numFive = 5;
+const numEleven = 11;
+const numThirty = 30;
+const numFifteen = 15;
+const numSeven = 7;
 let query = confirm('Do you want to play a game ?');
 if (query === true) {
-  let random = Math.floor(Math.random() * 6);
+  let random = Math.floor(Math.random() * numSix);
   let attempts = 3;
   game();
 
   function game() {
     for (let i = 0; i < 3; i++) {
-      let userAnswer = +prompt('Enter number from 0 to 5\n' + 'Attempts left: ' + attempts + '\nTotal Prize: ' + prize + '$' + '\nPossible prize on current attempt: ' + possiblePrize + '$');
+      let userAnswer = +prompt(
+        'Enter number from 0 to 5\n' +
+          'Attempts left: ' +
+          attempts +
+          '\nTotal Prize: ' +
+          prize +
+          '$' +
+          '\nPossible prize on current attempt: ' +
+          possiblePrize +
+          '$'
+      );
       if (random !== userAnswer) {
         --attempts;
         if (attempts === 3) {
-          possiblePrize = 10;
+          possiblePrize = numTen;
         } else if (attempts === 2) {
-          possiblePrize = 5;
-        } else if (attempts === 1) {
+          possiblePrize = numFive;
+        } else if (attempts === numOne) {
           possiblePrize = 2;
         }
       } else if (random === userAnswer) {
         if (attempts === 3) {
-          prize = 10;
-          let mazltoff = confirm('Congratulation! Your prize is: ' + prize + ' Do you want to continue?');
+          prize = numTen;
+          let mazltoff = confirm(
+            'Congratulation! Your prize is: ' +
+              prize +
+              ' Do you want to continue?'
+          );
           if (mazltoff === true) {
             game2();
           }
           break;
         } else if (attempts === 2) {
-          prize = 5;
-          let mazltoff = confirm('Congratulation! Your prize is: ' + prize + ' Do you want to continue?');
+          prize = numFive;
+          let mazltoff = confirm(
+            'Congratulation! Your prize is: ' +
+              prize +
+              ' Do you want to continue?'
+          );
           if (mazltoff === true) {
             game2();
           }
           break;
-        } else if (attempts === 1) {
+        } else if (attempts === numOne) {
           prize = 2;
-          let mazltoff = confirm('Congratulation! Your prize is: ' + prize + ' Do you want to continue?');
+          let mazltoff = confirm(
+            'Congratulation! Your prize is: ' +
+              prize +
+              ' Do you want to continue?'
+          );
           if (mazltoff === true) {
             game2();
           }
@@ -55,35 +85,38 @@ if (query === true) {
 
   function game2() {
     attempts = 3;
-    random = Math.floor(Math.random() * 11);
-    possiblePrize = 30;
+    random = Math.floor(Math.random() * numEleven);
+    possiblePrize = numThirty;
     for (let i = 0; i < 3; i++) {
-      let userAnswer = +prompt('Enter number from 0 to 10\n' +
-        'Attempts left: ' +
-        attempts +
-        '\nTotal Prize: ' +
-        prize +
-        '$' +
-        '\nPossible prize on current attempt: ' +
-        possiblePrize + '$');
+      let userAnswer = +prompt(
+        'Enter number from 0 to 10\n' +
+          'Attempts left: ' +
+          attempts +
+          '\nTotal Prize: ' +
+          prize +
+          '$' +
+          '\nPossible prize on current attempt: ' +
+          possiblePrize +
+          '$'
+      );
       if (random !== userAnswer) {
         --attempts;
         if (attempts === 3) {
-          possiblePrize = 30;
+          possiblePrize = numThirty;
         } else if (attempts === 2) {
-          possiblePrize = 15;
-        } else if (attempts === 1) {
-          possiblePrize = 7;
+          possiblePrize = numFifteen;
+        } else if (attempts === numOne) {
+          possiblePrize = numSeven;
         }
       } else if (random === userAnswer) {
         if (attempts === 3) {
-          prize2 = 30;
+          prize2 = numThirty;
           break;
         } else if (attempts === 2) {
-          prize2 = 15;
+          prize2 = numFifteen;
           break;
-        } else if (attempts === 1) {
-          prize2 = 7;
+        } else if (attempts === numOne) {
+          prize2 = numSeven;
           break;
         }
       }
@@ -98,10 +131,10 @@ if (query === true) {
   }
   let again = confirm('Do you want to play again? ');
   if (again === true) {
-    random = Math.floor(Math.random() * 6);
+    random = Math.floor(Math.random() * numSix);
     attempts = 3;
     prize = 0;
-    possiblePrize = 10;
+    possiblePrize = numTen;
     game();
   } else {
     let totalPrize = prize + prize2;
