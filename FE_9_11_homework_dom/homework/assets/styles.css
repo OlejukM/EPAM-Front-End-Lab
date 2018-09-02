@@ -63,8 +63,9 @@ ul.todo{
 ul.todo li {
     position: relative;
     width: 100%;
+    margin-bottom: 10px;
+    margin-left: 20px;
 }
-
 #add{
     width: 10%;
     border: 0;
@@ -81,4 +82,21 @@ ul.todo li {
 
 #crop-square{
     cursor: pointer;
+}
+
+button{
+    border: 0;
+    background: none;
+}
+
+button.complete{
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+
+button.remove{
+    position: absolute;
+    right: 0;
+    top: 0;
 }
