@@ -1,0 +1,16 @@
+#content {
+    margin: 0 auto;
+    width: 30vw;
+    text-align: center;
+}
+
+#add{
+    border-radius: 10px;
+    width: 15vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+p{
+    font-size: 2vw;
+}
