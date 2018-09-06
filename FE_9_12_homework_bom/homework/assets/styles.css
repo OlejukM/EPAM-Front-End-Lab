@@ -4,13 +4,21 @@
     text-align: center;
 }
 
-#add{
+#add {
     border-radius: 10px;
     width: 15vw;
     font-size: 2vw;
     cursor: pointer;
 }
 
-p{
+p {
     font-size: 2vw;
+}
+
+.btnCancel {
+    cursor: pointer;
+}
+
+.btnSave {
+    cursor: pointer;
 }

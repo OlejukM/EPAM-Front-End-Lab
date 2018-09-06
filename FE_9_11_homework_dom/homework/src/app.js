@@ -7,7 +7,7 @@ let maxItems = 10;
 let firstNumberOfList = 0;
 let el = document.getElementById('add');
 if (el) {
-  el.addEventListener('click', function() {
+  el.addEventListener('click', function () {
     let value = document.getElementById('item').value;
     if (value) {
       addItemTodo(value);
