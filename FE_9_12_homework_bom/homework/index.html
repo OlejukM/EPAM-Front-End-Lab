@@ -8,14 +8,35 @@
 </head>
 
 <body>
-  <div id="root"></div>
-  <div id="content">
-    <h1>Simple TODO application</h1>
-    <a href="#addNewItem"><button id="add">Add new task</button></a>
-    <p>TODO is empty</p>
-    <h1></h1>
-  </div>
+  <div id="root">
 
+    <section class="main-page" id="main-page">
+      <h1>Simple TODO application</h1>
+      <button id="add-todo-btn" class="add-todo-btn" type="button">Add new task</button>
+      <ul class="todoList" id="todoList">
+
+      </ul>
+      <p id="emptyTodo">TODO is empty</p>
+    </section>
+
+    <section class="addItem" id="addItem">
+      <h1>Add todo</h1>
+      <input type="text" id="inputTodo" placeholder="">
+      <div class="buttons">
+        <button class="cancelBtn" id="cancelChanges" type="button">Cancel</button>
+        <button class="saveBtn" id="addChanges" type="button">Save changes</button>
+      </div>
+    </section>
+
+    <section class="modify" id="modify">
+      <h1>Modify item</h1>
+      <input type="text" id="modifyInput" placeholder="">
+      <div class="buttons">
+        <button class="cancelBtn" id="modifyCancelBtn" type="button">Cancel</button>
+        <button class="saveBtn" id="modifySaveBtn" type="button">Save changes</button>
+      </div>
+    </section>
+  </div>
   <script src="./src/app.js"></script>
 </body>
 

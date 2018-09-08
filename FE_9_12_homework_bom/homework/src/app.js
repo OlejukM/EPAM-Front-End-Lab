@@ -1,77 +1,58 @@
-// const rootNode = document.getElementById('root');
+let removeIcon = '<img src="assets/img/remove-s.jpg">';
+let checkIcon = '<img src="assets/img/todo-s.png">';
+let completeIcon = '<img src="assets/img/done-s.png">';
+let firstNumberOfList = 0;
+let todoList = document.createElement('ul');
+document.getElementById('addItem').style.display = 'none';
+document.getElementById('modify').style.display = 'none';
+let addBtn = document.getElementById('add-todo-btn');
+if (addBtn) {
+  addBtn.addEventListener('click', function() {
+    document.getElementById('main-page').style.display = 'none';
+    document.getElementById('addItem').style.display = 'block';
+  });
+}
 
-const todoItems = [{
-    isDone: false,
-    id: 12345,
-    description: 'Todo 1'
-}];
-
-let el = document.getElementById('add');
+let el = document.getElementById('addChanges');
 if (el) {
-    el.addEventListener('click', function () {
-        let rootDiv = document.getElementById('content');
-        clearDiv(rootDiv);
-        addElement(rootDiv);
-
-        let btnEvent = document.getElementsByClassName('btnSave');
-        if (btnEvent) {
-            btnEvent.addEventListener('click', function () {
-                let rootDiv = document.getElementById('content');
-                clearDiv(rootDiv);
-                addItemsTodo(rootDiv);
-            })
-        }
-    })
-}
-
-
-function addElement(rootDiv) {
-    let h = document.createElement('H1');
-    let t = document.createTextNode('Add task');
-    h.appendChild(t);
-
-    let input = document.createElement('INPUT');
-    rootDiv.appendChild(h);
-    rootDiv.appendChild(input);
-
-    let div = document.createElement('div');
-    rootDiv.appendChild(div);
-
-    let btn = document.createElement('button');
-
-    let btnText = document.createTextNode('Cancel');
-
-    btn.className = 'btnCancel'
-    btn.appendChild(btnText);
-    rootDiv.appendChild(btn);
-
-    let btn2 = document.createElement('button');
-    btn2.className = 'btnSave'
-
-    let btnText2 = document.createTextNode('Save Changes');
-    btn2.appendChild(btnText2);
-    rootDiv.appendChild(btn2);
-}
-
-function clearDiv(div) {
-    while (div.firstChild) {
-        div.removeChild(div.firstChild);
+  el.addEventListener('click', function() {
+    let value = document.getElementById('inputTodo').value;
+    if (value) {
+      addItemTodo(value);
     }
+  });
 }
 
-function addItemsTodo(rootDiv) {
-    let h = document.createElement('H1');
-    let t = document.createTextNode('Simple TODO Application');
-    h.appendChild(t);
-    rootDiv.appendChild(h);
-    let btn = document.createElement('button');
-    let btnText = document.createTextNode('Add new task');
-    btn.appendChild(btnText);
-    rootDiv.appendChild(btn);
+function removeItem() {
+  let item = this.parentNode;
+  let parent = item.parentNode;
+  parent.removeChild(item);
 }
 
+function completeItem() {
+  let item = this;
+  item = item.innerHTML = completeIcon;
+}
 
+function addItemTodo(text) {
+  let list = document.getElementById('todoList');
+  let item = document.createElement('li');
+  item.innerText = text;
+  document.getElementById('main-page').style.display = 'block';
+  document.getElementById('addItem').style.display = 'none';
+  document.getElementById('emptyTodo').style.display = 'none';
+  let remove = document.createElement('button');
+  remove.classList.add('remove');
+  remove.innerHTML = removeIcon;
+  remove.addEventListener('click', removeItem);
 
+  let check = document.createElement('button');
+  check.classList.add('check');
+  check.innerHTML = checkIcon;
+  check.addEventListener('click', completeItem);
 
+  item.appendChild(remove);
+  item.appendChild(check);
 
-// rootNode.appendChild( /* Append your list item node*/ );F
+  list.insertBefore(item, todoList.childNodes[firstNumberOfList]);
+}
