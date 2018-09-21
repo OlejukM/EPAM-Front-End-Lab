@@ -1,0 +1,43 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2A74BF;
+}
+p {
+  margin: inherit;
+}
+* {
+  box-sizing: border-box;
+}
+header {
+  background-color: #f8f9fa;
+}
+li.nav-item.active {
+  background-color: #2A74BF;
+}
+.navbar {
+  padding: 0;
+}
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #fff;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1.5px solid #2A74BF;
+  margin: 1em 0;
+  padding: 0;
+}
+footer {
+  margin-top: 50px;
+}
+footer .container .row {
+  background-color: #666;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,64 @@
+@import "variables";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: @blue;
+}
+p{
+  margin: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #f8f9fa;
+}
+
+li {
+  &.nav-item {
+    &.active {
+      background-color: @blue;
+    }
+  }
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-light {
+  .navbar-nav {
+    .active {
+      & > .nav-link {
+        color: #fff;
+      }
+    }
+  }
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1.5px solid @blue;
+  margin: 1em 0;
+  padding: 0;
+}
+
+footer {
+  margin-top: 50px;
+  .container {
+    .row {
+      background-color: @grey;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
