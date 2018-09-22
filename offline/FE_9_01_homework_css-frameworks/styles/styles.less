@@ -8,9 +8,6 @@ h5,
 h6 {
   color: @blue;
 }
-p{
-  margin: inherit;
-}
 
 * {
   box-sizing: border-box;
@@ -53,12 +50,56 @@ hr {
 
 footer {
   margin-top: 50px;
+
   .container {
-    .row {
-      background-color: @grey;
-      color: #fff;
-      display: flex;
-      align-items: center;
-    }
+    background-color: @grey;
+    color: #fff;
   }
+}
+
+.size {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caption {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: inherit;
+}
+
+.section-img-cardio-border {
+  border: 2px solid @red;
+}
+
+.section-img-fitness-border {
+  border: 2px solid @blue;
+}
+
+.section-img-zumba-border {
+  border: 2px solid @yellow;
+}
+
+.section-img-bootcamp-border {
+  border: 2px solid @green;
+}
+
+.section-img-cardio-background {
+  background-color: @red;
+}
+
+.section-img-fitness-background {
+  background-color: @blue;
+}
+
+.section-img-zumba-background {
+  background-color: @yellow;
+}
+
+.section-img-bootcamp-background {
+  background-color: @green;
 }

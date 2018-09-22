@@ -6,9 +6,6 @@ h5,
 h6 {
   color: #2A74BF;
 }
-p {
-  margin: inherit;
-}
 * {
   box-sizing: border-box;
 }
@@ -35,9 +32,44 @@ hr {
 footer {
   margin-top: 50px;
 }
-footer .container .row {
+footer .container {
   background-color: #666;
   color: #fff;
-  display: flex;
-  align-items: center;
+}
+.size {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.caption {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: inherit;
+}
+.section-img-cardio-border {
+  border: 2px solid #D7514C;
+}
+.section-img-fitness-border {
+  border: 2px solid #2A74BF;
+}
+.section-img-zumba-border {
+  border: 2px solid #D8C11D;
+}
+.section-img-bootcamp-border {
+  border: 2px solid #4D944B;
+}
+.section-img-cardio-background {
+  background-color: #D7514C;
+}
+.section-img-fitness-background {
+  background-color: #2A74BF;
+}
+.section-img-zumba-background {
+  background-color: #D8C11D;
+}
+.section-img-bootcamp-background {
+  background-color: #4D944B;
 }
