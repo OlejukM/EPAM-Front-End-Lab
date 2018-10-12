@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+input[type='text'] {
+    margin-bottom: 10px;
+    height: 25px;
+    border: 1px solid #1a1a1a;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+input[type='button'] {
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #00d0c3;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+input::placeholder {
+    color: #00d0c3
+}
+
+button {
+    height: 50px;
+}
+
+#land {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: #0A9F0C;
+}
+
+#water {
+    display: none;
+}
+
+@keyframes filling {
+    from {
+        background-position: center 25%;
+    }
+    to {
+        background-position: center 50%;
+    }
+}
+
+.container-text {
+    text-align: center;
+    background-image: url(https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: #FFFFFF;
+    padding-top: 20px;
+    font-size: 25vw;
+    font-family: 'Bungee', cursive;
+    animation: filling 3s ease forwards;
+}
+
+.box {
+    width: auto;
+    height: 100vh;
+    border-radius: 5px;
+    box-shadow: 0 2px 30px rgba(black, .2);
+    background: lighten(#f0f4c3, 10%);
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.wave {
+    opacity: .4;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    background: #0af;
+    width: 500px;
+    height: 125vh;
+    margin-left: -250px;
+    margin-top: -250px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+    animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: .2;
+}
+
+.box:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    z-index: 1;
+    line-height: 300px;
+    text-align: center;
+    transform: translate3d(0, 0, 0);
+    color: #00aaff;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: .4em;
+    font-size: 15vw;
+    text-indent: .3em;
+}
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+#loader {
+    display: none;
+    margin: 30px auto;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #ff563a;
+    border-right: 16px solid #40ff23;
+    border-bottom: 16px solid #fff000;
+    border-left: 16px solid #3b7cff;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
