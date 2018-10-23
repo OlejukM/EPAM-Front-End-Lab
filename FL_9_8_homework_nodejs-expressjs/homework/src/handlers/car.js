@@ -5,6 +5,7 @@ let getData = function () {
 const cars = getData();
 
 module.exports.create = function (req, res) {
+    const cars = getData();
     let postCar = {
         id: req.body.id,
         brand: req.body.brand,
@@ -27,10 +28,12 @@ module.exports.create = function (req, res) {
 }
 
 module.exports.carsList = function (req, res) {
+    const cars = getData();
     res.status(200).send(cars)
 };
 
 module.exports.returnsCarById = function (req, res) {
+    const cars = getData();
     const carId = req.params.id;
     let car = cars.find(function (car) {
         car.id === parseInt(carId);
@@ -45,6 +48,7 @@ module.exports.returnsCarById = function (req, res) {
 }
 
 module.exports.updateCarById = function (req, res) {
+    const cars = getData();
     const carId = req.params.id;
     let car = cars.find(function (car) {
         car.id === parseInt(carId);
@@ -64,6 +68,7 @@ module.exports.updateCarById = function (req, res) {
 }
 
 module.exports.removesCarById = function () {
+    const cars = getData();
     const carId = req.params.id;
     let car = cars.find(function (car) {
         car.id === parseInt(carId)
