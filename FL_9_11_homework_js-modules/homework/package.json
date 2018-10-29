@@ -1,0 +1,22 @@
+{
+  "name": "JS_Modules_homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/js/output-module.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.3",
+    "webpack": "^3.12.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
