@@ -1,5 +1,5 @@
 import {createStore} from 'redux';
-import {date} from "./data";
+import {date} from './data';
 import {styles} from './style.scss'
 
 let defaultState = date;
