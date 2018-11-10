@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="./app/app.constants.js"></script>
+    <script src="./app/app.controller.js"></script>
+    <script src="./app/app.module.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+
+  <body ng-app="postsWall">
+    <div ng-controller="feedsListController" class="container">
+      <h1>POSTS WALL</h1>
+      <label>
+        <input type="text" placeholder="Search by title..." ng-model="searchText"/>
+        <ul>
+          <li ng-repeat="feed in feeds | filter:searchText">
+            <span>{{ feed.author }}</span>
+            <h3>{{ feed.title }}</h3>
+            <p>{{ feed.text }}</p>
+          </li>
+        </ul>
+      </label>
+      <div ng-show="newPostForm">
+        <label>
+          <input type="text" ng-model="newFeed.title"/> 
+          <input type="text" ng-model="newFeed.text"/>
+          <button ng-click="addPost()" class="btn-style">Save</button> 
+          <button class="btn-cancel" ng-click="showFunc()">Cancel</button>
+        </label>
+      </div>
+      <button ng-click="showFunc()" class="btn-style">Add new post</button>
+    </div>
+  </body>
+</html>
