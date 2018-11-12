@@ -1,0 +1,16 @@
+<button class="lesson-button-style" (click)="showModal()">{{ text }}</button>
+<ul>
+  <li *ngFor="let lesson of lessons, let i = index">
+    <table>
+      <tr>
+        <td>{{ i + 1 }}</td>
+        <td>{{ lesson.topic }}</td>
+        <td>{{ lesson.date }}</td>
+        <td>{{ lesson.lecturer }}</td>
+      </tr>
+    </table>
+  </li>
+</ul>
+<div class="modal">
+  <app-modal [showMePartially]="showVar" [newLesson]="newLesson" [lessons]="lessons"></app-modal>
+</div>

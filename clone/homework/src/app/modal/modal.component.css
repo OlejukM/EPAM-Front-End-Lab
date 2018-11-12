@@ -1,0 +1,31 @@
+.input-container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container input{
+    height: 50px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.button-container{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.button-container button{
+    width: 49%;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: #FF3933;
+    font-size: 24px;
+}
+
+.button-container button:first-child{
+    margin-right: 2%;
+    background-color: #33FF60;
+}

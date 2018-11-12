@@ -1,0 +1,29 @@
+.lesson-button-style{
+    width: 99%;
+    height: 50px;
+    background-color: #FF5733;
+    border: 1px solid #000;
+    font-size: 24px;
+    color: #fff;
+}
+
+th, td {
+  border: 1px solid black;
+  width: 20%;
+}
+
+table{
+  width: 99%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+ul{
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
